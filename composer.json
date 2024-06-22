@@ -1,0 +1,18 @@
+{
+    "name": "oalves/php_weather",
+    "description": "Projeto IoT para Monitoramento de Temperatura e Umidade",
+    "type": "project",
+    "require": {
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Weater\\Iot\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Osvaldo A. Neto"
+        }
+    ]
+}
