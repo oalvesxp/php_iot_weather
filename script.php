@@ -1,9 +1,18 @@
 <?php
 
-use Weather\Iot\Infraestructure\Persistence\ConnectionCreator;
+use Weather\Iot\Domain\Model\SensorDht;
 
 require_once 'vendor/autoload.php';
 
-$pdo = ConnectionCreator::Connection();
+$timeZone = new DateTimeZone('America/Sao_Paulo');
+$dateTime = new \DateTimeImmutable('now', $timeZone);
 
-var_dump($pdo);
+$sensor01 = new SensorDht(
+    null,
+    'Pintura 01',
+    $dateTime,
+    26.3,
+    48.7
+);
+
+var_dump($sensor01);
