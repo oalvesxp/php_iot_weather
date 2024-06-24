@@ -17,4 +17,4 @@ Pré-requisitos:
 * [PHP ~> 8.3.7](https://www.php.net/downloads)
 * [MySQL ~> 8.0.37](https://dev.mysql.com/downloads/)
 
-Todas as dependências do projeto estaram disponíveis no ```composer.json```, para carrega-las basta executar ```composer install```.
+Todas as dependências do projeto estaram disponíveis no ```composer.json```, para carrega-las basta executar ```composer dump-autoload```.
