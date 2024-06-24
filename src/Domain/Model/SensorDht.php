@@ -14,4 +14,9 @@ class SensorDht
     {
         
     }
+
+    public function timeConvert(): \DateTimeInterface
+    {
+        return $this->time;
+    }
 }
