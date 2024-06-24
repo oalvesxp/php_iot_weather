@@ -15,6 +15,22 @@ class WeatherSensorDhtRepository implements SensorDhtRepository
         $this->connection = $connection;
     }
 
+    public function getAll(): array
+    {
+        $qry = "
+            SELECT * FROM WT0010;
+        ";
+        
+        $sensors = $this->connection
+            ->query($qry)
+            ->fetchAll(PDO::FETCH_ASSOC);
+
+        return array_map(
+            $this->hydrateSensors(...),
+            $sensors
+        );
+    }
+
     public function save(SensorDht $sensor): bool
     {
         $qry = "
@@ -33,6 +49,20 @@ class WeatherSensorDhtRepository implements SensorDhtRepository
         ]);
 
         return $success;
+    }
+
+    /** @return SensorDht */
+    public function hydrateSensors(array $data): SensorDht
+    {
+        $sensor = new SensorDht(
+            $data['WT0_ID'],
+            $data['WT0_NAME'],
+            new \DateTimeImmutable($data['WT0_TIME']),
+            $data['WT0_TEMP'],
+            $data['WT0_HUM']
+        );
+
+        return $sensor;
     }
 
 }
