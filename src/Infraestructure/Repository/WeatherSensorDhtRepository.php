@@ -2,7 +2,6 @@
 
 namespace Weather\Iot\Infraestructure\Repository;
 
-use DateTime;
 use PDO;
 use Weather\Iot\Domain\Model\SensorDht;
 use Weather\Iot\Domain\Repository\SensorDhtRepository;
@@ -14,6 +13,42 @@ class WeatherSensorDhtRepository implements SensorDhtRepository
     public function __construct(PDO $connection)
     {
         $this->connection = $connection;
+    }
+
+    public function getSensorDhtPintura(): array
+    {
+        $qry = "
+            SELECT * FROM WT0010 
+            WHERE WT0_NAME = 'Pintura 01'
+            ORDER BY WT0_ID DESC LIMIT 1;
+        ";
+
+        $stmt = $this->connection->prepare($qry);
+        $stmt->execute();
+        $sensor = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return array_map(
+            $this->hydrateSensors(...),
+            $sensor
+        );
+    }
+
+    public function getSensorDhtVerniz(): array
+    {
+        $qry = "
+            SELECT * FROM WT0010 
+            WHERE WT0_NAME = 'Verniz 01'
+            ORDER BY WT0_ID DESC LIMIT 1;
+        ";
+
+        $stmt = $this->connection->prepare($qry);
+        $stmt->execute();
+        $sensor = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return array_map(
+            $this->hydrateSensors(...),
+            $sensor
+        );
     }
 
     public function getLastHour(): array
