@@ -15,8 +15,8 @@ class SensorDht
         
     }
 
-    public function timeConvert(): \DateTimeInterface
+    public function timeConvert(): string
     {
-        return $this->time;
+        return $this->time->format('Y-m-d\\ H:i:s');
     }
 }
