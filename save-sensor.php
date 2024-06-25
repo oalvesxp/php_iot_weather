@@ -16,9 +16,9 @@ try {
     $sensor = new SensorDht( 
         null,
         'Verniz 01',
-        new \DateTimeImmutable('2024-06-25 10:45:24'),
-        29.8,
-        42.5
+        new \DateTimeImmutable('2024-06-25 13:36:24'),
+        19.2,
+        29.3
     );
     
     $repository->save($sensor);
