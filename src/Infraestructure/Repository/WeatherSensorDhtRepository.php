@@ -43,7 +43,7 @@ class WeatherSensorDhtRepository implements SensorDhtRepository
 
         $success = $stmt->execute([
             ':name' => $sensor->name,
-            ':time' => $sensor->timeConvert()->format('Y-m-d \\ H:i:s'),
+            ':time' => $sensor->timeConvert(),
             ':temp' => $sensor->temperature,
             ':hum' => $sensor->humidity
         ]);

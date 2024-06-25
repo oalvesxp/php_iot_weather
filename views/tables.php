@@ -1,6 +1,4 @@
-<?php require_once __DIR__ . '/partials/_header.php'; 
-
-?>
+<?php require_once __DIR__ . '/partials/_header.php'; ?>
 
   <main id="main" class="main">
 
@@ -36,14 +34,14 @@
                       <th data-type="date" data-format="YYYY/DD/MM">Data</th>
                       <th>Temperatura</th>
                       <th>Umidade</th>
-                    </tr>
+                    </tr> 
                   </thead>
                   <tbody>
                     <?php foreach($sensors as $row) : ?>
                       <tr>
                         <td><?= $row->id ?></td>
                         <td><?= $row->name ?></td>
-                        <td>?</td>
+                        <td><?= $row->timeConvert() ?></td>
                         <td><?= $row->temperature ?> °C</td>
                         <td><?= $row->humidity ?> %</td>
                       </tr>
