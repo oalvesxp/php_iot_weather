@@ -2,6 +2,7 @@
 
 namespace Weather\Iot\Infraestructure\Repository;
 
+use DateTime;
 use PDO;
 use Weather\Iot\Domain\Model\SensorDht;
 use Weather\Iot\Domain\Repository\SensorDhtRepository;
@@ -13,6 +14,31 @@ class WeatherSensorDhtRepository implements SensorDhtRepository
     public function __construct(PDO $connection)
     {
         $this->connection = $connection;
+    }
+
+    public function getLastHour(): array
+    {
+        $qry = "
+            SELECT * FROM WT0010 
+            WHERE 
+                WT0_TIME BETWEEN :start AND :end;
+        ";
+
+        $start = date('Y-m-d\\ H:i:s', strtotime('-4 hour'));
+        $end = date('Y-m-d\\ H:i:s', strtotime('-3 hour'));
+
+        $stmt = $this->connection->prepare($qry);
+        
+        $stmt->bindValue(':start', $start);
+        $stmt->bindValue(':end', $end);
+        $stmt->execute();
+
+        $sensors = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return array_map(
+            $this->hydrateSensors(...),
+            $sensors
+        );
     }
 
     public function getAll(): array
