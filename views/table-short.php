@@ -25,7 +25,7 @@ var_dump($start);
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Histórico de Temperatura & Umidade</h5>
+                        <h5 class="card-title">Histórico da Última Hora</h5>
                         <p>Você pode filtrar as informações em tempo real atravéz do cabeçalho e do campo de "Search".</p>
                     
                         <!-- Table with stripped rows -->
