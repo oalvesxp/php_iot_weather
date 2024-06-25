@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/partials/_head.php'; ?>
 <?php require_once __DIR__ . '/partials/_header.php'; ?>
 
     <main id="main" class="main">
@@ -21,19 +22,19 @@
                 <!-- F.A.Q Group 1 -->
                 <div class="card">
                     <div class="card-body">
-                    <h5 class="card-title">Laborum dolorem quam porro</h5>
+                    <h5 class="card-title">F.A.Q.</h5>
 
                     <div class="accordion accordion-flush" id="faq-group-1">
 
                         <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" data-bs-target="#faqsOne-1" type="button" data-bs-toggle="collapse">
-                            Debitis adipisci eius?
+                                De quanto em quanto tempo o sensor coleta informações?
                             </button>
                         </h2>
                         <div id="faqsOne-1" class="accordion-collapse collapse" data-bs-parent="#faq-group-1">
                             <div class="accordion-body">
-                            Ut quasi odit odio totam accusamus vero eius. Nostrum asperiores voluptatem eos nulla ab dolores est asperiores iure. Quo est quis praesentium aut maiores. Corrupti sed aut expedita fugit vero dolorem. Nemo rerum sapiente. A quaerat dignissimos.
+                                Cada sensor está programado para coletar informações de temperatura e umidade a cada minuto. Caso seja necessário ajustar este tempo, contate o time de T.I.
                             </div>
                         </div>
                         </div>
@@ -41,12 +42,12 @@
                         <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" data-bs-target="#faqsOne-2" type="button" data-bs-toggle="collapse">
-                            Omnis fugiat quis repellendus?
+                                Onde posso obter um histórico de temperatura detalhado?
                             </button>
                         </h2>
                         <div id="faqsOne-2" class="accordion-collapse collapse" data-bs-parent="#faq-group-1">
                             <div class="accordion-body">
-                            In minus quia impedit est quas deserunt deserunt et. Nulla non quo dolores minima fugiat aut saepe aut inventore. Qui nesciunt odio officia beatae iusto sed voluptatem possimus quas. Officia vitae sit voluptatem nostrum a.
+                                No menu a esquerda há uma sessão de tabelas, onde pode ser encontrada páginas com os últimos 30 registros ou o histórico completo de temperatura e/ou umidade.
                             </div>
                         </div>
                         </div>
@@ -54,12 +55,12 @@
                         <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" data-bs-target="#faqsOne-3" type="button" data-bs-toggle="collapse">
-                            Et occaecati praesentium aliquam modi incidunt?
+                                A plataforma apresenta problemas, como posso resolver?
                             </button>
                         </h2>
                         <div id="faqsOne-3" class="accordion-collapse collapse" data-bs-parent="#faq-group-1">
                             <div class="accordion-body">
-                            Voluptates magni amet enim perspiciatis atque excepturi itaque est. Sit beatae animi incidunt eum repellat sequi ea saepe inventore. Id et vel et et. Nesciunt itaque corrupti quia ducimus. Consequatur maiores voluptatum fuga quod ut non fuga.
+                                Entre em contrato com o time de T.I. através da plataforma de Tickets: <a href="https://signus.freshservice.com/support/tickets/new" target="_blank">Clique Aqui!</a>
                             </div>
                         </div>
                         </div>
