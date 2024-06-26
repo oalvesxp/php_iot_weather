@@ -1,11 +1,5 @@
 <?php require_once __DIR__ . '/partials/_head.php'; ?>
-<?php require_once __DIR__ . '/partials/_header.php'; 
-
-$start = date('Y-m-d H:i:s', strtotime('-4 hour'));
-$end = date('Y-m-d H:i:s');
-
-var_dump($start);
-?>
+<?php require_once __DIR__ . '/partials/_header.php'; ?>
 
 <main id="main" class="main">
     <div class="pagetitle">

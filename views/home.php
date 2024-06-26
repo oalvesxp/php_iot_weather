@@ -78,7 +78,7 @@
                                 <?php if($p->temperature <= 16.0): ?>
                                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                         <i class="bi bi-exclamation-octagon me-1"></i>
-                                        A <b>temperatura</b> está acima do limite mínimo: <b><?= $p->temperature ?></b> °C <= 16 °C
+                                        A <b>temperatura</b> está abaixo do limite mínimo: <b><?= $p->temperature ?></b> °C <= 16 °C
                                     </div>
                                 <?php endif ?>
                                 <!-- End Temperature Alert Lower Danger -->
@@ -172,7 +172,7 @@
                                 <?php if($v->temperature <= 16.0): ?>
                                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                         <i class="bi bi-exclamation-octagon me-1"></i>
-                                        A <b>temperatura</b> está acima do limite mínimo: <b><?= $v->temperature ?></b> °C <= 16 °C
+                                        A <b>temperatura</b> está abaixo do limite mínimo: <b><?= $v->temperature ?></b> °C <= 16 °C
                                     </div>
                                 <?php endif ?>
                                 <!-- End Temperature Alert Lower Danger -->
