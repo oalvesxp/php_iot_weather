@@ -59,8 +59,8 @@ class WeatherSensorDhtRepository implements SensorDhtRepository
                 WT0_TIME BETWEEN :start AND :end;
         ";
 
-        $start = date('Y-m-d\\ H:i:s', strtotime('-4 hour'));
-        $end = date('Y-m-d\\ H:i:s', strtotime('-3 hour'));
+        $start = date('Y-m-d\\ H:i:s', strtotime('-3 hour'));
+        $end = date('Y-m-d\\ H:i:s', strtotime('-1 hour'));
 
         $stmt = $this->connection->prepare($qry);
         
