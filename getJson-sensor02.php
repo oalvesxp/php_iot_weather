@@ -17,7 +17,7 @@ $pdo->beginTransaction();
 
 try {
     $ch = curl_init();
-    $url = "http://172.15.0.23:1280/pintura";
+    $url = "http://172.15.0.23:1280/sensor02";
 
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -34,7 +34,7 @@ try {
 
     $sensor = new SensorDht(
         null,
-        'Pintura 01',
+        'Verniz 01',
         $dateTime,
         $obj->temperatura,
         $obj->umidade
