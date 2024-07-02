@@ -13,12 +13,12 @@ Equipamentos e Hardware:
 * [Documentação da Estrutura](STRUCTURE.md)
 
 ### DESCRIÇÃO DO PROJETO
+---
 Este é um projeto para coleta e armazenamento de dados Meteorológicos.</br>
 Os dados são captados sensor DHT e expostos pelo arduino em 3 endpoints (/, /sensor01, /sensor02). O PHP coleta essas informações a cada X minutos e registra os dados na base MySQL ou SQLite.
 
 ### ESCOPO DO PROJETO
 ---
-Esse projeto foi inciado com uma necessidade interna de monitorar a temperatura e umidade de 2 salas de uma fábrica. </br>
-Estas salas trabalham com produtos quimicos variam sua formula de acordo com a variação climática.</br>
+Esse projeto foi inciado com uma necessidade interna de monitorar a temperatura e umidade de 2 salas de uma fábrica. Estas salas trabalham com produtos quimicos variam sua formula de acordo com a variação climática.
 
 O objetivo desse projeto é ter um histórico para minimizar as falhas de produção devido as variações climáticas.
